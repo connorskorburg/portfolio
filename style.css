@@ -127,7 +127,7 @@ h3 {
   }
   #name {
     font-size: 2.75rem;
-    margin: 1rem auto;
+    margin: 2rem auto;
     text-align: center;
     color: #3B4C61; 
     color: var(--darkBlue);
@@ -138,13 +138,7 @@ h3 {
     display: inline-block;
     transform: rotate(15deg);
   }
-  #hero-svg-mobile {
-    width: 80%;
-    margin: 2rem auto;   
-  }
-  #hero-svg {
-    display: none;
-  }
+
   #hello {
     text-align: center;
     font-size: 1.15rem;
@@ -184,27 +178,34 @@ h3 {
     transition: all 450ms ease-in-out;
   }
 
+
 #about {
   width: 100%;
   padding: 4rem 5%;
   display: flex;
   flex-direction: column;
 }
-
   #about-inner {
     color: var(--darkBlue);
     text-align: center;
   }
-  #about-inner h2 {
+  #about h2 {
+    text-align: center;
+    color: var(--darkBlue);
     padding-bottom: 5px;
     border-bottom: 2px solid var(--darkBlue);
     width: 15rem;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
   }
-  #about-inner p {
+  #about-inner img {
+    width: 80%;
+  }
+  .about-info {
     padding-top: 2.5rem;
     line-height: 1.75rem;
     padding-bottom: 2.5rem;
+    color: var(--darkBlue);
+    text-align: center;
   }
 
 
@@ -304,14 +305,14 @@ h3 {
     .tech-card h3 {
       text-align: center;
       color: var(--blue);
-      padding-bottom: 2rem;
+      padding-top: 1rem;
     }
     .flex {
       display: flex;
     }
       .flex ul {
         flex: 1;
-        padding: 1rem 0;
+        padding: 1rem 0 1rem 0;
       }
         .flex ul li {
           text-align: center;
@@ -327,17 +328,6 @@ h3 {
           width: 50px;
         }
 
-/* .semi-circle-bottom {
-  width: 100%;
-  height: 3rem;
-  background-color:var(--darkBlue);
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  position: relative;
-
-  bottom: 3rem;
-} */
-
 #contact {
   width: 100%;
   padding: 5rem 5% 2rem 5%;
@@ -347,7 +337,6 @@ h3 {
 }
   #contact h2 {
     padding-bottom: 5px;
-    width: 15rem;
     text-align: center;
     margin: 0 auto 2.5rem auto;
   }
@@ -394,53 +383,48 @@ h3 {
       margin-left: 1.75rem;
       font-size: 0.9rem;
       text-decoration: none;
-      color: var(--lightBlue);
+      color: #fff;
+      font-size: 1rem;
       padding-top: 0.25rem;
     }
-    /* #hero-svg {
-      flex: 1;
-      display: block;
-      width: 100%;
-      padding-top: 3.5rem;
-    } */
-    #hero {
-      display: flex;
+    #top-nav section article:last-child a:hover {
+      border-bottom: 1px solid #fff;
+      transition: all 450ms ease-in-out;
     }
-    #hero-content {
-      flex: 1;
-      padding-top: 2rem;
-    }
+
     #hero-content p, .info {
-      font-size: 1rem;
-      /* text-align: left; */
-    }
-    .info {
-      /* margin: 0; */
+      font-size: 1.25rem;
+      width: 100%;
+      font-weight: 500;
     }
       #name {
-        font-size: 2.15rem;
+        font-size: 3.5rem;
         width: 100%;
-        /* text-align: left; */
-        margin: 1rem 0 2rem 0;
+        margin: 1rem 0;
       }
-      .btn-container {
-        /* justify-content: flex-start; */
+
+      #about p {
+        font-size: 1.15rem;
+        line-height: 2.75rem;
+      }
+
+    #my-work .cards {
+      flex-direction: row;
+    }
+      #my-work .card:first-child {
+        margin-right: 5%;
       }
 }
 
 @media screen and (min-width: 1000px) {
   #top-nav section article:last-child a{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #fff;
     font-weight: 600;
   }
   #name {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
-  /* #hero-content {
-    padding-right: 1rem;
-    padding-top: 7.5%;
-  } */
   #hero p {
     font-weight: 600;
     font-size: 1.15rem;
@@ -450,16 +434,25 @@ h3 {
     font-size: 1.5rem;
   }
   /* about me */
-  #about p {
-    font-size: 1.5rem;
-    line-height: 3rem;
-  }
   h2 {
     font-size: 2rem;
   }
   h3 {
     font-size: 1.5rem;
   }
+  #about-inner {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+    #about-inner article {
+      flex: 1;
+    }
+    #computer-tablet {
+      width: 100%;
+      padding-top: 7.5%;
+    }
+
   .card p {
     font-size: 1.25rem;
   }
@@ -470,8 +463,6 @@ h3 {
   }
     .tech-card:first-child {
       margin-right: 5%;
-      /* display: flex; */
-
     }
       .flex {
         flex-direction: column;
@@ -487,4 +478,66 @@ h3 {
     #contact-inner article {
       flex: 1;
     }
+}
+
+@media screen and (min-width: 1200px) {
+  #name {
+    font-size: 5.5rem;
+  }
+  #hero p, .info {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  #about p {
+    font-size: 1.5rem;
+    line-height: 3.25rem;
+  }
+}
+
+
+@media screen and (min-width: 1400px) {
+  #name {
+    font-size: 6.5rem;
+  }
+  #hero, .info {
+    font-size: 1.75rem;
+  }
+  #computer-tablet {
+    padding-top: 0;
+  }
+  #about p {
+    font-size: 1.75rem;
+  }
+  li {
+    font-size: 1.25rem;
+  }
+  #contact-inner article a, #contact-inner article p {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  #top-nav section article:last-child a {
+    font-size: 1.25rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  #name{
+    font-size: 8.5rem;
+  }
+  #hero p, .info {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 2.25rem;
+    line-height: 5rem;
+  }
+  #contact-inner article a, #contact-inner article p {
+    font-size: 1.5rem;
+  }
 }
