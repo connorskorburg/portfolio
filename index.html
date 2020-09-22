@@ -20,6 +20,10 @@
 
       <article>
         <img id="hamburger" src="./images/hamburger.svg" alt="Hamburger Icon">
+        <a href="#about">About</a>
+        <a href="#my-work">My Work</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#contact">Contact</a>
       </article>
 
     </section>
@@ -43,27 +47,29 @@
 
 
 
-
+  
   <main id="hero">
-    <p id="hello">Hello <span id="hand">👋</span>, My Name is</p>
-    
-    <section id="hero-svg">
-      <img src="./images/computer.svg" alt="Computer Image">
-    </section>
-    <h1>Connor Skorburg</h1>
+    <div class="bg-img"></div>
+    <section id="hero-content">
 
-    <p class="info">I create products and experiences for businesses and clients</p>
-    
-    <div class="btn-container">
-      <a href="#my-work">My Work</a>
-    </div>
-    
+      <p id="hello">Hello <span id="hand">👋</span>, My Name is</p>
+
+      <h1 id="name">Connor Skorburg</h1>
+      
+      <p class="info">I create products and experiences for businesses and clients</p>
+      
+      <div class="btn-container">
+        <a href="#my-work">My Work</a>
+      </div>
+      
+    </section>
+
+
   </main>
 
 
   <main id="about">
 
-    <img src="./images/about-wave.svg" alt="">
 
     <section id="about-inner">
 
@@ -73,7 +79,11 @@
     
     </section>
 
-    <img src="./images/about-wave.svg" alt="">
+    <section id="computer-container">
+      <img src="./images/computer.svg" alt="">
+    </section>
+
+
   </main>
 
   <main id="my-work">
@@ -89,6 +99,11 @@
 
         <p>HealthTrak is a CRUD application where users can log their nutrients, workouts and meals.</p>
         
+        <a href="https://github.com/connorskorburg/healthTrak">
+          Source Code 
+          <img src="./images/github-original.svg" alt="Github icon">
+        </a>
+
       </article>
 
       <article class="card">
@@ -97,6 +112,12 @@
         <img src="./images/healthtrak-dash.png" alt="">
         
         <p>cmpt.ws is an application where users can compact and cutomsize their long URLs into short URLs.</p>
+      
+        <a href="https://github.com/connorskorburg/cmpt.ws">
+          Source Code 
+          <img src="./images/github-original.svg" alt="Github icon">
+        </a>
+
       </article>
 
     </section>
@@ -105,13 +126,13 @@
   </main>
 
 
-  <div class="semi-circle"></div>
+  <!-- <div class="semi-circle"></div> -->
 
   <main id="technologies">
 
     <h2>Technologies</h2>
 
-    <section class="cards">
+    <section class="cards tech-cards">
 
       <article class="tech-card">
         
@@ -234,20 +255,20 @@
       <article>
 
         <a href="https://linkedin.com/in/connor-skorburg">
-          <img src="./images/linkedin-icon.svg" alt="Linkedin Icon">
+          <img id="linkedin-link" src="./images/linkedin-icon.svg" alt="Linkedin Icon">
         </a>
         
-        <p>linkedin.com/in/connor-skorburg</p>
+        <a href="https://linkedin.com/in/connor-skorburg">linkedin.com/in/connor-skorburg</a>
 
       </article>
 
       <article>
 
         <a href="https://github.com/connorskorburg">
-          <img src="./images/github-icon.svg" alt="Github Icon">
+          <img id="github-link" src="./images/github-icon.svg" alt="Github Icon">
         </a>
-
-        <p>github.com/connorskorburg</p>
+        
+        <a href="https://github.com/connorskorburg">github.com/connorskorburg</a>
 
       </article>
 
