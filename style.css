@@ -212,7 +212,7 @@ h3 {
 
 #my-work {
   width: 100%;
-  background-color: var(--darkBlue);
+  background-color: rgb(41, 44, 49);
   padding: 4rem 5%;
 }
   #my-work h2 {
@@ -229,18 +229,16 @@ h3 {
   }
     .card {
       width: 100%;
-      color: var(--darkBlue);
-      background-color: var(--lightBlue);
+      color: var(--lightBlue);
+      background-color: rgb(41, 44, 49);
       text-align: center;
       padding: 1rem;
-      border-radius: 0.5rem;
       margin-bottom: 2.5rem;
-      box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
     }
     .card h3 {
       padding: 1rem 0 2rem 0;
     }
-    .card img {
+    .img-links img {
       width: 100%;
     }
     .card p {
@@ -248,18 +246,30 @@ h3 {
       line-height: 2rem;
       padding: 2rem 0;
     }
-    .card a {
-      display: inline-block;
-      padding: 0.5rem 0 1rem 0;
-      font-size: 1.15rem;
-      border-radius: 0.5rem;
-      color: #fff;
-      text-decoration: none;
-      margin-bottom: 1rem;
+    .btn-card-container{
       width: 100%;
-      background-color: var(--blue);
-      box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+      display: flex;
     }
+      .btn-card-container a {
+        display: inline-block;
+        padding: 0.5rem 0 1rem 0;
+        font-size: 1.1rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 1rem;
+        width: 100%;
+        background-color: var(--blue);
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+      }
+      .btn-card-container a:last-child {
+        background-color: rgb(41, 44, 49);
+        background-color: var(--bgColor);
+        color: rgb(41, 44, 49);
+        padding-top: 1rem;
+        margin-left: 2.5%;
+      }
       .card a:hover {
         transform: scale(1.02);
         box-shadow: 6px 6px 12px rgba(0,0,0,0.2);
@@ -269,6 +279,9 @@ h3 {
         width: 1.5rem;
         position: relative;
         top: 4px;
+      }
+      .work-content p, .tech-used {
+        display: none;
       }
 
 
@@ -315,7 +328,7 @@ h3 {
           position: relative;
           top: 3px;
         }
-        #sql-alchemy {
+        .sql-alchemy {
           width: 50px;
         }
 
@@ -361,6 +374,11 @@ h3 {
 
 
 /* media queries */
+@media screen and (min-width: 300px) and (max-width:350px){
+  #name {
+    font-size: 2.25rem;
+  }
+}
 @media screen and (min-width: 700px) {
   #hamburger, #hero-svg-mobile {
     display: none;
@@ -373,12 +391,13 @@ h3 {
       margin-left: 1.75rem;
       font-size: 0.9rem;
       text-decoration: none;
-      color: #fff;
+      color: rgb(217, 233, 255);
+      font-weight: 600;
       font-size: 1rem;
       padding-top: 0.25rem;
     }
     #top-nav section article:last-child a:hover {
-      border-bottom: 1px solid #fff;
+      border-bottom: 1px solid rgb(217, 233, 255);
       transition: all 450ms ease-in-out;
     }
 
@@ -397,19 +416,13 @@ h3 {
         font-size: 1.15rem;
         line-height: 2.75rem;
       }
-
-    #my-work .cards {
-      flex-direction: row;
-    }
-      #my-work .card:first-child {
-        margin-right: 5%;
-      }
 }
 
 @media screen and (min-width: 1000px) {
   #top-nav section article:last-child a{
     font-size: 1rem;
-    color: #fff;
+    color: rgb(217, 233, 255);
+    border-bottom: 1px solid var(--darkBlue);
     font-weight: 600;
   }
   #name {
@@ -428,7 +441,7 @@ h3 {
     font-size: 2rem;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   #about-inner {
     padding-bottom: 4rem;
@@ -442,7 +455,57 @@ h3 {
       width: 100%;
       padding-top: 7.5%;
     }
+  /* my work */
+  .card {
+    display: flex;
+  }
+  .card:first-child {
+    margin-bottom: 3rem;
+  }
+  #cmpt {
+    flex-direction: row-reverse;
+    border-top: 1px solid #fff;
+    padding-top: 3rem;
+  }
+    .work-content, .img-links {
+      flex: 1;
+    }
+    #health-trak .work-content, #cmpt .img-links {
+      margin-right: 7.5%;
+    }
+      .work-content p {
+        display: block;
+        font-weight: 500;
+        padding: 0;
+      }
+      .tech-used {
+        display: flex;
+        justify-content: flex-start;
+      }
+        .tech-used ul {
+          padding: 1rem 0;
+          flex: 1;
+        }
+        .tech-used li{
+          text-align: center;
+          padding: 1rem 0;
+          font-weight: 600;
+          list-style-type: none;
+        }
+    #row-rev {
+      flex-direction: row-reverse;
+    }
 
+
+    .img-links{
+      padding-top: 2rem;
+    }
+      .img-links p {
+        display: none;
+      }
+      .img-links a {
+        margin-top: 1.5rem;
+      }
   .card p {
     font-size: 1.25rem;
   }
@@ -482,6 +545,18 @@ h3 {
     font-size: 1.5rem;
     line-height: 3.25rem;
   }
+  h3 {
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 2.15rem;
+  }
+  #health-trak{
+    margin-bottom: 5rem;
+  }
+  #cmpt {
+    padding-top: 5rem;
+  }
 }
 
 
@@ -498,6 +573,16 @@ h3 {
   #about p {
     font-size: 1.75rem;
   }
+  .work-content p {
+    padding: 5% 0;
+    font-size: 1.5rem;
+  }
+  #health-trak{
+    margin-bottom: 7rem;
+  }
+  #cmpt {
+    padding-top: 7rem;
+  }
   li {
     font-size: 1.25rem;
   }
@@ -506,18 +591,31 @@ h3 {
   }
 }
 
+@media screen and (min-width:1600px) {
+  .work-content p {
+    padding: 7.5% 0;
+    font-size: 1.75rem;
+  }
+  #health-trak{
+    margin-bottom: 10rem;
+  }
+  #cmpt {
+    padding-top: 10rem;
+  }
+}
+
 @media screen and (min-width: 1900px) {
   #top-nav section article:last-child a {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
   h2 {
     font-size: 3rem;
   }
   h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   #name{
-    font-size: 8.5rem;
+    font-size: 7.5rem;
   }
   #hero p, .info {
     font-size: 2rem;
